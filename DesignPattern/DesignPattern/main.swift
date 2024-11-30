@@ -11,6 +11,7 @@ enum DesignPatterns {
     case builder
     case prototype
     case factorymethod
+    case abstractfactorymethod
 }
 
 func runDesignPattern(designPattern: DesignPatterns) {
@@ -38,6 +39,11 @@ func runDesignPattern(designPattern: DesignPatterns) {
         client.order(factory: IPadFactory())
         client.order(factory: IphoneFactory())
     
+    case .abstractfactorymethod:
+        let uiFactory1: UIFactoryable = IphoneFactory()
+        let uiFactory2: UIFactoryable = IPadFactory()
+        
+        
         
     }
     
